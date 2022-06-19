@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">Etch-a-Sketch</h1>
+    </header>
+    <main>
+    <div id="container"></div>
+      <div id="tools">
+        <div id="btn-container">
+          <button class="black" value="black">Black</button>
+          <button class="rgb" value="rgb">
+            <span class="red">R</span>
+            <span class="green">G</span>
+            <span class="blue">B</span>
+          </button>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+      </div>
+    </main>
+    <footer>RickyLobo626 | The Odin Project</footer>
+  </body>
+</html>
