@@ -4,6 +4,9 @@ html {
   font-weight: 400;
   --grid-cols: 1;
   --grid-rows: 1;
+  --red: #e63737;
+  --green: #02ad02;
+  --blue: #1080ff;
 }
 
 *, *::before, *::after {
@@ -13,6 +16,7 @@ html {
 }
 
 body {
+  background: linear-gradient(45deg, rgba(255,0,0,0.3) 0%, rgba(0,255,0,0.3) 50%, rgba(0,0,255,0.3) 100%);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -41,6 +45,7 @@ main {
 
 .square {
   border: 1px solid black;
+  background-color: white;
 }
 
 #logo {
@@ -57,17 +62,30 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
+  font-family: sans-serif;
 }
 
 button {
+  width: 40px;
+  height: 40px;
   color: white;
   font-family: inherit;
   font-size: 1.5rem;
   font-weight: 700;
   box-shadow: 0 0 5px black;
   border: none;
-  padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+button img {
+  width: 50%;
+}
+
+#square {
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+  background-color: black;
 }
 
 #btn-container {
@@ -75,24 +93,20 @@ button {
   gap: 2rem;
 }
 
-#black-btn {
-  background-color: black;
-}
-
-#eraser-btn, #clear-btn {
-  color: black;
-}
-
 .red {
-  color: red;
+  color: var(--red);
 }
 
 .green {
-  color: green;
+  color: var(--green)
 }
 
 .blue {
-  color: blue;
+  color: var(--blue);
+}
+
+.white-bc {
+  background-color: white;
 }
 
 /* SLIDER */
