@@ -8,6 +8,7 @@ const slider = document.querySelector('.slider');
 let current = 'black';
 let squares;
 
+// Initial grid
 makeRows(slider.value, slider.value);
 
 // Resize Grid
@@ -34,9 +35,6 @@ toolBtns.forEach(colorBtn => {
       });
       current = previous;
     }
-    
-    
-    
   });
 });
 
