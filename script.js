@@ -5,7 +5,7 @@ const blackBtn = document.getElementById("black");
 const rgbBtn = document.getElementById("rgb");
 const toolBtns = document.querySelectorAll('button');
 const slider = document.querySelector('.slider');
-let chosen = 'black';
+let current = 'black';
 let squares;
 
 makeRows(slider.value, slider.value);
@@ -25,13 +25,18 @@ slider.addEventListener('click', () => {
 // Choose tool/color
 toolBtns.forEach(colorBtn => {
   colorBtn.addEventListener('click', () => {
-    chosen = colorBtn.value;
-    
-    squares.forEach(square => {
-      if (chosen == 'clear') {
+    let previous = current;
+    current = colorBtn.value;
+
+    if (current == 'clear') {
+      squares.forEach(square => {
         square.style.backgroundColor = 'white';
-      }
-    });
+      });
+      current = previous;
+    }
+    
+    
+    
   });
 });
 
@@ -53,10 +58,10 @@ function fillSquares(squares) {
   squares.forEach(square => {
     square.addEventListener('mouseover', () => {
   
-      if (chosen == 'rgb') {
+      if (current == 'rgb') {
         square.style.backgroundColor = `rgb(${[...getRandomRGB()]})`;
       } else {
-        square.style.backgroundColor = chosen;
+        square.style.backgroundColor = current;
       }
 
     });
