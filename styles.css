@@ -62,11 +62,12 @@ main {
 button {
   color: white;
   font-family: inherit;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   box-shadow: 0 0 5px black;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 #btn-container {
@@ -74,8 +75,12 @@ button {
   gap: 2rem;
 }
 
-.black {
+#black-btn {
   background-color: black;
+}
+
+#eraser-btn, #clear-btn {
+  color: black;
 }
 
 .red {
