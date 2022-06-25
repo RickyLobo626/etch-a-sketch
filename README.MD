@@ -1,6 +1,6 @@
-# calculator
+# etch-a-sketch
 
-This is one of my projects for The Odin Project<br/>
+This was a simple but fun project I made for The Odin Project!<br/>
 
 For this project I used:<br/>
 
