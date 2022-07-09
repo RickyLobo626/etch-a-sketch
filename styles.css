@@ -1,12 +1,13 @@
-html {
-  font-family: 'Kalam', cursive;
-  font-size: 12px;
-  font-weight: 400;
+:root {
+  --font-fam: 'Kalam', cursive;
   --grid-cols: 1;
   --grid-rows: 1;
   --red: #e63737;
   --green: #02ad02;
   --blue: #1080ff;
+  font-family: var(--font-fam);
+  font-size: 12px;
+  font-weight: 400;
 }
 
 *, *::before, *::after {
@@ -134,4 +135,16 @@ button:hover {
   height: 25px;
   background: #0969fa;
   cursor: pointer;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.size-output {
+  font-weight: bold;
+  font-size: 1.8rem;
+  width: 3ch;
 }

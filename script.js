@@ -5,8 +5,16 @@ const blackBtn = document.getElementById("black");
 const rgbBtn = document.getElementById("rgb");
 const toolBtns = document.querySelectorAll('button');
 const slider = document.querySelector('.slider');
+const output = document.querySelector('.size-output');
 let current = 'black';
 let squares;
+
+output.textContent = slider.value;
+
+slider.addEventListener('input', () => {
+  output.textContent = slider.value;
+});
+
 
 // Initial grid
 makeRows(slider.value, slider.value);
@@ -37,6 +45,7 @@ toolBtns.forEach(colorBtn => {
     }
   });
 });
+
 
 // Make rows
 function makeRows(rows, cols) {
